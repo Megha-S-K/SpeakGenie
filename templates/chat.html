@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🧞 SpeakGenie</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/themes.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <h2 id="mode-label">🧞 You're now in Genie Mode</h2>
+
+        <div id="chat-window" class="chat-box"></div>
+
+        <div class="controls">
+            <input type="text" id="text-input" placeholder="Type your message..." />
+            <button id="send-btn" title="Send">📨</button>
+            <button id="record-btn" title="Speak">🎙️</button>
+        </div>
+    </div>
+
+    <script>
+        const currentMode = "{{ mode }}";
+    localStorage.setItem("selectedMode", currentMode);
+
+    const modeLabel = {
+        "genie": "🧞 You're now in Genie Mode",
+        "teacher": "📚 Welcome to Teacher Mode",
+        "storyteller": "📖 Story Time Mode"
+    }[currentMode] || "🤖 Assistant Mode";
+
+    document.getElementById("mode-label").innerText = modeLabel;
+
+    const mode = "{{ mode }}";
+    document.body.classList.add(`mode-${mode}`);  // ✅ Applies correct background class
+
+    localStorage.setItem("selectedMode", mode);
+    </script>
+    <script type="module" src="/static/record.js"></script>
+</body>
+
+</html>

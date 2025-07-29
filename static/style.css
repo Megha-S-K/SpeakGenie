@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Comic Neue', cursive;
+    background: linear-gradient(to bottom right, #ffeaa7, #fab1a0);
+    color: #333;
+}
+
+.container, .chat-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background: #fffef2;
+    border-radius: 25px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff7675;
+}
+
+.chat-box {
+    background: #fff;
+    height: 300px;
+    overflow-y: auto;
+    border-radius: 15px;
+    border: 3px dashed #e0e0e0;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bubble {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 8px 0;
+    max-width: 75%;
+    line-height: 1.4;
+    animation: popIn 0.3s ease;
+    word-wrap: break-word;
+}
+
+.bubble.user {
+    background-color: #dff9fb;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+.bubble.genie {
+    background-color: #ffebf2;
+    align-self: flex-start;
+    margin-right: auto;
+    border-bottom-left-radius: 0;
+}
+
+.controls {
+    display: flex;
+    margin-top: 20px;
+    gap: 12px;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border-radius: 14px;
+    border: 2px solid #fab1a0;
+    font-size: 1rem;
+    background: #fffaf0;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+#mode-label {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+

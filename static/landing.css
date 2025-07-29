@@ -1,0 +1,70 @@
+/* Fun Comic Font */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/static/images/bg.png"); /* or .png */
+    background-size: cover;           /* scales image to cover screen */
+    background-repeat: no-repeat;     /* no tiling */
+    background-position: center;      /* centers image */
+    height: 100vh;                    /* makes sure it covers full screen */
+    font-family: 'Baloo 2', cursive;  /* optional fun font */
+}
+
+
+.landing-container {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.title {
+    font-size: 3.2rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px #00000050;
+    margin-bottom: 40px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.mode-card {
+    background: #fffffff1;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.4s ease, background 0.3s ease;
+    width: 200px;
+    height: 200px;
+    font-size: 1.3rem;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.mode-card:hover {
+    transform: scale(1.1);
+    background: #ffffff;
+}
+
+.mode-card img {
+    width: 80%;
+    height: 80%;
+    margin-bottom: 10%;
+    border-radius: 15%;
+}
+

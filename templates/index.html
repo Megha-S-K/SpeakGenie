@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Your Mode</title>
+    <link rel="stylesheet" href="/static/landing.css">
+</head>
+<body>
+    <div class="landing-container">
+        <h1 class="title">✨ Welcome to SpeakGenie ✨</h1>
+
+        <div class="mode-buttons">
+            <a href="/chat?mode=genie" class="mode-card genie">
+                <img src="/static/images/lamp.png" alt="Genie Mode">
+                Genie Mode
+            </a>
+            <a href="/chat?mode=teacher" class="mode-card teacher">
+                <img src="/static/images/teacher.png" alt="Teacher Mode">
+                Teacher Mode
+            </a>
+            <a href="/chat?mode=storyteller" class="mode-card storyteller">
+                <img src="/static/images/storyteller.png" alt="Storytelling Mode">
+                Storytelling Mode
+            </a>
+        </div>
+    </div>
+
+    <script>
+    function goToMode(mode) {
+        // Optional smoke animation
+        if (mode === 'genie') {
+            document.body.classList.add("genie-animation");
+            setTimeout(() => {
+                window.location.href = `/chat?mode=${mode}`;
+            }, 3000);
+        } else {
+            window.location.href = `/chat?mode=${mode}`;
+        }
+    }
+</script>
+
+
+</body>
+</html>

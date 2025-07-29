@@ -1,0 +1,28 @@
+body.mode-genie {
+    background: radial-gradient(circle at top left, #8e44ad, #1abc9c);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;      /* centers image */
+    height: 100vh;
+    color:black;
+}
+
+/* === TEACHER MODE === */
+body.mode-teacher {
+    background: linear-gradient(to bottom right, #fefefe, #e5f1ff);
+    color: #333;
+}
+
+/* === STORYTELLER MODE === */
+body.mode-storyteller {
+    background: #0b1e3d;
+    background-image: url('/static/images/stars-bg.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;      /* centers image */
+    height: 100vh;
+    color: black;
+    position: relative;
+}
+
+
